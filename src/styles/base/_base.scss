@@ -1,0 +1,9 @@
+@use '../abstracts/index' as abs;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: abs.$poppins, sans-serif;
+}

@@ -5,7 +5,8 @@
       // "@/*": ["src/*"],
       "@Components/*": ["src/components/*"],
       "@Styles/*": ["src/styles/*"]
-    }
+    },
+    "noEmit": true
   }
   // "include" : ["src/**/*"],
   // "exclude": ["node_modules", "dist", "config", ".vscode"]

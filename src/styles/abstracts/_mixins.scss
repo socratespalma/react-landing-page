@@ -1,0 +1,21 @@
+@mixin transition-ease-in-out {
+  transition: all 0.5s ease-in-out;
+}
+
+@mixin media-md {
+  @media only screen and (min-width: $medium) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media only screen and (min-width: $large) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media only screen and (min-width: $x-large) {
+    @content;
+  }
+}
