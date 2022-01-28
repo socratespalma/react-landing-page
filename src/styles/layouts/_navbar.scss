@@ -1,0 +1,51 @@
+@use '../abstracts/index' as abs;
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  //   visibility: hidden;
+  // * Work on the open navbar feature (Showing)
+
+  .menu-nav {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    background-color: yellowgreen;
+    list-style: none;
+    padding-right: 1rem;
+    // transform: translateY(-100%);
+    @include abs.transition-ease-in-out;
+    // * Work on the open navbar feature (animation)
+
+    &__item {
+      //   transform: translateX(100vw);
+      @include abs.transition-ease-in-out;
+    }
+    &__link {
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 1.5rem;
+      padding: 2rem 0;
+      font-weight: 400;
+      @include abs.transition-ease-in-out;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+@for $i from 1 to 5 {
+  .menu-nav__item:nth-child(#{$i}) {
+    transition-delay: ($i * 0.1s) + 0.15s;
+  }
+}
