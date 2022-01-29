@@ -6,8 +6,7 @@
   left: 0;
   width: 100vw;
   opacity: 0.98;
-  //   visibility: hidden;
-  // * Work on the open navbar feature (Showing)
+  visibility: hidden;
 
   .menu-nav {
     display: flex;
@@ -19,14 +18,9 @@
     background-color: yellowgreen;
     list-style: none;
     padding-right: 1rem;
-    // transform: translateY(-100%);
+    transform: translateY(-100%);
     @include abs.transition-ease-in-out;
-    // * Work on the open navbar feature (animation)
 
-    &__item {
-      //   transform: translateX(100vw);
-      @include abs.transition-ease-in-out;
-    }
     &__link {
       text-decoration: none;
       color: white;
@@ -38,14 +32,19 @@
       @include abs.transition-ease-in-out;
 
       &:hover {
-        color: red;
+        color: black;
       }
     }
   }
 }
 
-@for $i from 1 to 5 {
-  .menu-nav__item:nth-child(#{$i}) {
-    transition-delay: ($i * 0.1s) + 0.15s;
-  }
+.menu-btn {
+  font-size: 2rem;
+  position: absolute;
+  z-index: 90;
+  right: 1rem;
+  top: 0.8rem;
+  cursor: pointer;
+  background: none;
+  border: none;
 }
