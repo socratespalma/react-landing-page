@@ -1,6 +1,6 @@
+import Navbar from '@components/layout/Navbar';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from './Navbar';
 
 export default function Header() {
   return (

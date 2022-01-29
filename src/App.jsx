@@ -1,17 +1,15 @@
-import Landing from '@containers/Landing';
-import NotFound from '@containers/NotFound';
+import LandingPage from '@containers/LandingPage';
+import NotFoundPage from '@containers/NotFoundPage';
 import '@styles/main.scss';
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<LandingPage />} />
+      <Route path="*" element={<NotFoundPage />} />
+    </Routes>
   );
 }
 
