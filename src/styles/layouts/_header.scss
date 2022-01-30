@@ -1,3 +1,5 @@
+@use '../abstracts/index' as abs;
+
 header {
   width: 100%;
   position: fixed;
@@ -5,7 +7,7 @@ header {
   height: 4rem;
   z-index: 100;
   padding: 1rem;
-  background-color: greenyellow;
+  background-color: transparent;
 
   .logo {
     text-decoration: none;
