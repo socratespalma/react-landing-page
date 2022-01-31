@@ -1,0 +1,50 @@
+@use '../abstracts/index' as abs;
+
+.hero {
+  height: 100vh;
+  background: linear-gradient(to right, rgba(#333, 0.6), rgba(#333, 0.3)),
+    url('@assets/img/hero-img.jpg') no-repeat left top;
+  background-size: cover;
+
+  &__elements {
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+    text-align: center;
+    padding: 10rem 1rem;
+    color: abs.$mint-cream;
+
+    h2 {
+      font-size: 2.5rem;
+      letter-spacing: 0.08rem;
+    }
+
+    .copy-1 {
+      color: abs.$honey-yellow;
+    }
+    .copy-2 {
+      border-bottom: 3px solid abs.$mint-cream;
+      padding-bottom: 0.3rem;
+    }
+
+    h3 {
+      font-weight: 300;
+      letter-spacing: 0.2rem;
+    }
+  }
+
+  &__cta {
+    color: abs.$mint-cream;
+    text-decoration: none;
+    border: 2px solid abs.$mint-cream;
+    padding: 1rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+
+  &__chevron {
+    font-size: 2.5rem;
+    color: abs.$mint-cream;
+  }
+}
