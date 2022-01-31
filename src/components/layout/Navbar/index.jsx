@@ -31,9 +31,13 @@ export default function Navbar() {
             </NavLink>
           </li>
           <li className="menu-nav__item">
-            <NavLink className="menu-nav__link" to="/">
+            <a
+              href="#services"
+              className="menu-nav__link"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               Services
-            </NavLink>
+            </a>
           </li>
           <li className="menu-nav__item">
             <NavLink className="menu-nav__link" to="/">
