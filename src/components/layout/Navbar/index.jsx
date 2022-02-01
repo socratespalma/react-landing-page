@@ -32,6 +32,15 @@ export default function Navbar() {
           </li>
           <li className="menu-nav__item">
             <a
+              href="#about"
+              className="menu-nav__link"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              About
+            </a>
+          </li>
+          <li className="menu-nav__item">
+            <a
               href="#services"
               className="menu-nav__link"
               onClick={() => setIsOpen(!isOpen)}
@@ -40,14 +49,13 @@ export default function Navbar() {
             </a>
           </li>
           <li className="menu-nav__item">
-            <NavLink className="menu-nav__link" to="/">
-              About
-            </NavLink>
-          </li>
-          <li className="menu-nav__item">
-            <NavLink className="menu-nav__link" to="/">
+            <a
+              href="#contact"
+              className="menu-nav__link"
+              onClick={() => setIsOpen(!isOpen)}
+            >
               Contact
-            </NavLink>
+            </a>
           </li>
         </ul>
       </nav>

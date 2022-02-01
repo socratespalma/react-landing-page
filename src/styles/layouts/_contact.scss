@@ -1,0 +1,52 @@
+@use '../abstracts/index' as abs;
+
+.contact {
+  //   background-color: abs.$honey-yellow;
+  padding-bottom: 6rem;
+
+  &__form {
+    background-color: abs.$mint-cream;
+    border-radius: 8px;
+    padding: 2rem;
+    width: 25rem;
+    margin: 0 auto;
+    box-shadow: 1px 1px 10px 1px #a9a9a9;
+  }
+
+  .form-control {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 1rem;
+  }
+
+  input[type='text'],
+  input[type='email'],
+  textarea {
+    background-color: abs.$mint-cream;
+    padding: 0.5rem 0 0.5rem;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid abs.$dark-color;
+  }
+
+  textarea {
+    resize: none;
+    height: 5rem;
+  }
+
+  label {
+    text-align: left;
+  }
+
+  .submit {
+    width: 100%;
+    padding: 0.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: abs.$trypan-blue;
+    color: abs.$mint-cream;
+  }
+}

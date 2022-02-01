@@ -15,7 +15,7 @@
     justify-content: center;
     height: 100vh;
     overflow: hidden;
-    background-color: abs.$honey-yellow;
+    background-color: abs.$dark-color;
     list-style: none;
     padding-right: 1rem;
     transform: translateY(-100%);
@@ -23,7 +23,7 @@
 
     &__link {
       text-decoration: none;
-      color: abs.$dark-color;
+      color: abs.$mint-cream;
       display: inline-block;
       text-transform: uppercase;
       font-size: 1.5rem;
@@ -32,7 +32,7 @@
       @include abs.transition-ease-in-out;
 
       &:hover {
-        color: abs.$mint-cream;
+        color: abs.$orange;
       }
     }
   }
@@ -47,5 +47,5 @@
   cursor: pointer;
   background: none;
   border: none;
-  color: abs.$dark-color;
+  color: abs.$mint-cream;
 }

@@ -1,0 +1,5 @@
+@use '../abstracts/index' as abs;
+
+.footer {
+  background-color: abs.$mint-cream;
+}

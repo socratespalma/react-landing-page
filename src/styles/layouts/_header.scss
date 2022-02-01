@@ -7,7 +7,7 @@ header {
   height: 4rem;
   z-index: 100;
   padding: 1rem;
-  background-color: transparent;
+  background-color: abs.$dark-color;
 
   .logo {
     text-decoration: none;
@@ -15,7 +15,7 @@ header {
     font-size: 1.5rem;
     position: absolute;
     z-index: 90;
-    color: abs.$dark-color;
+    color: abs.$mint-cream;
     letter-spacing: 0.1rem;
   }
 }

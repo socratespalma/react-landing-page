@@ -1,0 +1,46 @@
+@use '../abstracts/index' as abs;
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 45rem;
+}
+
+.info-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    height: 6rem;
+    text-align: left;
+    justify-content: space-between;
+    align-items: left;
+    border-left: 3px solid abs.$trypan-blue;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 0 8px 8px 0;
+
+    h3 {
+      font-weight: 700;
+      font-size: 1.4rem;
+    }
+
+    p {
+      color: abs.$dark-color;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+  }
+}
+
+.woman-img {
+  object-fit: cover;
+  width: 20rem;
+  height: 20rem;
+  box-shadow: 5px 5px 25px 5px #a9a9a9;
+}

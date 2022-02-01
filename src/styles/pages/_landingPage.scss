@@ -1,7 +1,9 @@
 @use '../abstracts/index' as abs;
 
 .about-us,
-.services {
+.services,
+.testimonials,
+.contact {
   padding: 6rem 2rem 0;
   text-align: center;
 
@@ -14,85 +16,10 @@
   }
 }
 
-.statistics {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
-  height: 45rem;
-}
-
-.info-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-
-  &__card {
-    display: flex;
-    flex-direction: column;
-    height: 6rem;
-    text-align: left;
-    justify-content: space-between;
-    align-items: left;
-    border-left: 3px solid abs.$trypan-blue;
-    padding: 1rem;
-    width: 8rem;
-    border-radius: 0 8px 8px 0;
-
-    // &:hover {
-    // }
-
-    h3 {
-      font-weight: 700;
-      font-size: 1.4rem;
-    }
-
-    p {
-      color: abs.$dark-color;
-      font-size: 0.8rem;
-      font-weight: 700;
-    }
-  }
+.contact {
+  padding-bottom: 6rem;
 }
 
 .img-container {
   margin: 0;
-}
-
-.woman-img {
-  object-fit: cover;
-  width: 20rem;
-  height: 20rem;
-}
-
-.services__cards {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 3rem;
-  place-items: center;
-
-  .card {
-    background-color: abs.$platinum;
-    width: 18rem;
-    height: 16rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 1.7rem;
-    text-align: justify;
-    border-radius: 8px;
-    box-shadow: 1px 1px 10px 1px #a9a9a9;
-  }
-}
-
-.icon {
-  font-size: 2rem;
-}
-
-.first-letter {
-  color: abs.$trypan-blue;
-}
-
-.services {
-  //   background-color: abs.$red-crayola;
 }

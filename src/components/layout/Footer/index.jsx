@@ -8,7 +8,7 @@ import {
 
 export default function Footer() {
   return (
-    <section>
+    <section className="footer">
       <section>
         <div>
           <h3>SPG</h3>

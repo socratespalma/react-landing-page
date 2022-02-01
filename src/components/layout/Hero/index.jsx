@@ -10,10 +10,10 @@ export default function Hero() {
           leading <span className="copy-2">best practices</span>
         </h2>
         <h3>We help you with consulting and digital marketing services</h3>
-        <a href="#about-us" className="hero__cta">
+        <a href="#about" className="hero__cta">
           Learn more
         </a>
-        <a href="#about-us" className="hero__chevron">
+        <a href="#about" className="hero__chevron">
           {' '}
           <BsChevronDown />
         </a>

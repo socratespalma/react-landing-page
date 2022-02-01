@@ -1,0 +1,29 @@
+@use '../abstracts/index' as abs;
+
+.services__cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  place-items: center;
+
+  .card {
+    background-color: abs.$platinum;
+    width: 18rem;
+    height: 16rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 1.7rem;
+    text-align: justify;
+    border-radius: 8px;
+    box-shadow: 1px 1px 10px 1px #a9a9a9;
+  }
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.first-letter {
+  color: abs.$trypan-blue;
+}
