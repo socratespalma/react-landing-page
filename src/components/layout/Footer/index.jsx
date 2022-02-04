@@ -1,3 +1,4 @@
+import getYear from '@utils/getYear';
 import React from 'react';
 import {
   FaFacebookF,
@@ -64,7 +65,7 @@ export default function Footer() {
           <nav>
             <ul>
               <li>
-                <Link to="/">Privacy Policy</Link>
+                <a href="#about">Privacy Policy</a>
               </li>
               <li>
                 <a href="#about">Terms of Use</a>
@@ -74,7 +75,8 @@ export default function Footer() {
         </div>
       </section>
       <p className="footer__copyright">
-        Copyright &copy;2022 | SPG Consulting | All Rights Reserved{' '}
+        Copyright &copy;{getYear()} | SPG Consulting, LLC. | All Rights
+        Reserved.
       </p>
     </section>
   );

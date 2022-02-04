@@ -1,3 +1,4 @@
+import useScroll from '@hooks/useScroll';
 import React, { useEffect, useRef, useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
@@ -12,6 +13,19 @@ export default function Navbar() {
     setSize(window.innerWidth);
   };
 
+  const handleClick = () => {
+    if (size < 1024) {
+      setIsOpen(!isOpen);
+    } else {
+      setIsOpen(true);
+    }
+  };
+
+  const handleHome = () => {
+    window.scrollTo(0, 0);
+    handleClick();
+  };
+
   useEffect(() => {
     window.addEventListener('resize', checkSize);
 
@@ -20,8 +34,6 @@ export default function Navbar() {
     } else if (size >= 1024) {
       setIsOpen(true);
     }
-
-    // size < 1024 ? setIsOpen(false) : setIsOpen(true);
 
     return () => {
       window.removeEventListener('resize', checkSize);
@@ -41,38 +53,24 @@ export default function Navbar() {
       navRef.current.style.visibility = 'visible';
       showNavRef.current.style.transform = 'translateY(0)';
     }
-
     // else {
     //   setIsOpen(true);
     // }
   }, [isOpen]);
 
+  useScroll();
+
   return (
     <>
-      {/* <Link to="/" className="logo">
-        SPG
-      </Link> */}
       <nav className="nav" ref={navRef}>
         <ul className="menu-nav" ref={showNavRef}>
           <li className="menu-nav__item">
-            <NavLink
-              className="menu-nav__link"
-              to="/"
-              onClick={() =>
-                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
-              }
-            >
+            <NavLink className="menu-nav__link" to="/" onClick={handleHome}>
               Home
             </NavLink>
           </li>
           <li className="menu-nav__item">
-            <a
-              href="#about"
-              className="menu-nav__link"
-              onClick={() =>
-                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
-              }
-            >
+            <a href="#about" className="menu-nav__link" onClick={handleClick}>
               About
             </a>
           </li>
@@ -80,21 +78,13 @@ export default function Navbar() {
             <a
               href="#services"
               className="menu-nav__link"
-              onClick={() =>
-                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
-              }
+              onClick={handleClick}
             >
               Services
             </a>
           </li>
           <li className="menu-nav__item">
-            <a
-              href="#contact"
-              className="menu-nav__link"
-              onClick={() =>
-                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
-              }
-            >
+            <a href="#contact" className="menu-nav__link" onClick={handleClick}>
               Contact
             </a>
           </li>

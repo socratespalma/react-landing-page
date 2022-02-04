@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --fix",
+    "test": "jest",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -26,6 +27,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^27.4.7",
     "prettier": "^2.5.1",
     "vite": "^2.7.2"
   }
