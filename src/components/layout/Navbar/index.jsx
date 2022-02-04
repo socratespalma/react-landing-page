@@ -4,28 +4,63 @@ import { NavLink } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [size, setSize] = useState(window.innerWidth);
   const navRef = useRef(null);
   const showNavRef = useRef(null);
 
+  const checkSize = () => {
+    setSize(window.innerWidth);
+  };
+
   useEffect(() => {
-    if (isOpen) {
+    window.addEventListener('resize', checkSize);
+
+    if (size < 1024) {
+      setIsOpen(false);
+    } else if (size >= 1024) {
+      setIsOpen(true);
+    }
+
+    // size < 1024 ? setIsOpen(false) : setIsOpen(true);
+
+    return () => {
+      window.removeEventListener('resize', checkSize);
+    };
+  }, [size]);
+
+  useEffect(() => {
+    if (size < 1024) {
+      if (isOpen) {
+        navRef.current.style.visibility = 'visible';
+        showNavRef.current.style.transform = 'translateY(0)';
+      } else {
+        navRef.current.style.visibility = 'hidden';
+        showNavRef.current.style.transform = 'translateY(-100%)';
+      }
+    } else if (size >= 1024) {
       navRef.current.style.visibility = 'visible';
       showNavRef.current.style.transform = 'translateY(0)';
-    } else {
-      navRef.current.style.visibility = 'hidden';
-      showNavRef.current.style.transform = 'translateY(-100%)';
     }
+
+    // else {
+    //   setIsOpen(true);
+    // }
   }, [isOpen]);
 
   return (
     <>
+      {/* <Link to="/" className="logo">
+        SPG
+      </Link> */}
       <nav className="nav" ref={navRef}>
         <ul className="menu-nav" ref={showNavRef}>
           <li className="menu-nav__item">
             <NavLink
               className="menu-nav__link"
               to="/"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() =>
+                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
+              }
             >
               Home
             </NavLink>
@@ -34,7 +69,9 @@ export default function Navbar() {
             <a
               href="#about"
               className="menu-nav__link"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() =>
+                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
+              }
             >
               About
             </a>
@@ -43,7 +80,9 @@ export default function Navbar() {
             <a
               href="#services"
               className="menu-nav__link"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() =>
+                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
+              }
             >
               Services
             </a>
@@ -52,7 +91,9 @@ export default function Navbar() {
             <a
               href="#contact"
               className="menu-nav__link"
-              onClick={() => setIsOpen(!isOpen)}
+              onClick={() =>
+                size < 1024 ? setIsOpen(!isOpen) : setIsOpen(true)
+              }
             >
               Contact
             </a>

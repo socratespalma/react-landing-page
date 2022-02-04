@@ -19,3 +19,15 @@ header {
     letter-spacing: 0.1rem;
   }
 }
+
+@include abs.media-lg {
+  header {
+    height: 5.5rem;
+  }
+
+  .logo {
+    font-size: 2rem;
+    left: 2rem;
+    top: 1.9rem;
+  }
+}

@@ -8,7 +8,7 @@ export default function Contact() {
   return (
     <article id="contact" className="contact">
       <h2>
-        Claim <span className="underline">your free</span> audit
+        C<span className="underline">ontact u</span>s
       </h2>
       <p className="subtext">
         By giving you a free audit we prove our potential to truly help your

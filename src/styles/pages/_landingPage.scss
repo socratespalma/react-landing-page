@@ -23,3 +23,10 @@
 .img-container {
   margin: 0;
 }
+
+@include abs.media-md {
+  .subtext {
+    margin: 1.5rem 0;
+    // background-color: red;
+  }
+}

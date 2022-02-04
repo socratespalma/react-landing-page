@@ -21,7 +21,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: left;
-  height: 14rem;
+  // height: 14rem;
 
   p {
     padding-left: 2rem;
@@ -43,5 +43,27 @@
 
   &__right {
     text-align: right;
+  }
+}
+
+@include abs.media-sm {
+  .testimonials__container {
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    // place-items: center;
+    // margin: 0 auto;
+    padding: 0 0.5rem;
+  }
+  .testimonials__person {
+    width: 20rem;
+  }
+}
+
+@include abs.media-xl {
+  .testimonials__container {
+    width: 80rem;
+    margin: 0 auto;
   }
 }

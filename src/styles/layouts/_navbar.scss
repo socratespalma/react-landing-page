@@ -49,3 +49,30 @@
   border: none;
   color: abs.$mint-cream;
 }
+@include abs.media-lg {
+  .menu-btn {
+    visibility: hidden;
+  }
+
+  .nav {
+    visibility: visible;
+
+    .menu-nav {
+      display: block;
+      transform: translateY(0);
+      height: 100%;
+      background-color: transparent;
+      text-align: right;
+
+      &__item {
+        // display: flex;
+        display: inline;
+        padding-right: 1.5rem;
+      }
+
+      &__link {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}

@@ -9,7 +9,7 @@
   &__elements {
     display: grid;
     place-items: center;
-    gap: 3rem;
+    gap: 2rem;
     text-align: center;
     padding: 10rem 1rem;
     color: abs.$mint-cream;
@@ -24,7 +24,7 @@
     }
     .copy-2 {
       border-bottom: 3px solid abs.$mint-cream;
-      padding-bottom: 0.3rem;
+      // padding-bottom: 0.1rem;
     }
 
     h3 {
@@ -41,10 +41,31 @@
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 0.1rem;
+    visibility: hidden;
   }
 
   &__chevron {
     font-size: 2.5rem;
     color: abs.$mint-cream;
+    visibility: hidden;
+  }
+}
+
+@include abs.media-sm {
+  .hero__cta,
+  .hero__chevron {
+    visibility: visible;
+  }
+}
+
+@include abs.media-md {
+  .hero__elements {
+    gap: 3rem;
+  }
+}
+
+@include abs.media-xl {
+  .hero__elements {
+    padding-top: 20rem;
   }
 }

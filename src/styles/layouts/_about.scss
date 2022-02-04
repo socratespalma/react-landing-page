@@ -3,15 +3,19 @@
 .statistics {
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   align-items: center;
-  justify-content: space-around;
-  height: 45rem;
+  // justify-content: space-around;
+  // height: auto;
+  width: 100%;
 }
 
 .info-stats {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
+  gap: 1rem;
+  // padding: 0 1rem;
+  // width: 100%;
 
   &__card {
     display: flex;
@@ -22,7 +26,7 @@
     align-items: left;
     border-left: 3px solid abs.$trypan-blue;
     padding: 1rem;
-    width: 8rem;
+    width: 7rem;
     border-radius: 0 8px 8px 0;
 
     h3 {
@@ -40,7 +44,33 @@
 
 .woman-img {
   object-fit: cover;
-  width: 20rem;
   height: 20rem;
+  width: 100%;
   box-shadow: 5px 5px 25px 5px #a9a9a9;
+}
+
+@include abs.media-sm {
+  .info-stats {
+    gap: 2rem;
+
+    &__card {
+      width: 8rem;
+    }
+  }
+
+  .woman-img {
+    width: 20rem;
+  }
+}
+
+@include abs.media-md {
+  .statistics {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    // width: 90%;
+    // background-color: red;
+    // margin: 0 auto;
+    // place-items: center;
+  }
 }

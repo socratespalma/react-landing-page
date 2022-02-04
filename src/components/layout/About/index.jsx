@@ -5,7 +5,7 @@ export default function About() {
   return (
     <article id="about" className="about-us">
       <h2>
-        We make <span className="underline">businesses</span> stand out
+        A<span className="underline">bout u</span>s
       </h2>
       <p className="subtext">
         We work with up to date industry standards to help our clients scale up

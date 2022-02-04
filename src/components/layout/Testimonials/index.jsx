@@ -14,7 +14,7 @@ export default function Testimonials() {
         These are some happy clients who work with us and have scaled up their
         own business with our work in digital marketing and consuting.
       </p>
-      <section>
+      <section className="testimonials__container">
         <div className="testimonials__person">
           <figure className="img-container">
             <img className="testimonial-img" src={man1} alt="client" />

@@ -8,7 +8,7 @@
     background-color: abs.$mint-cream;
     border-radius: 8px;
     padding: 2rem;
-    width: 25rem;
+    width: 100%;
     margin: 0 auto;
     box-shadow: 1px 1px 10px 1px #a9a9a9;
   }
@@ -48,5 +48,11 @@
     border: none;
     background-color: abs.$trypan-blue;
     color: abs.$mint-cream;
+  }
+}
+
+@include abs.media-sm {
+  .contact__form {
+    width: 20rem;
   }
 }
