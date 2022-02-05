@@ -9,10 +9,16 @@ export default function Navbar() {
   const navRef = useRef(null);
   const showNavRef = useRef(null);
 
+  /**
+   * This is a function that checks the size of the window
+   */
   const checkSize = () => {
     setSize(window.innerWidth);
   };
 
+  /**
+   * This is a function that sets the state of 'isOpen' depending on the screensize
+   */
   const handleClick = () => {
     if (size < 1024) {
       setIsOpen(!isOpen);
@@ -21,6 +27,9 @@ export default function Navbar() {
     }
   };
 
+  /**
+   * This is a function that handles the click on the home nav item
+   */
   const handleHome = () => {
     window.scrollTo(0, 0);
     handleClick();

@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --fix",
+    "docs": "jsdoc -c jsdoc.json",
     "test": "jest",
     "preview": "vite preview"
   },
