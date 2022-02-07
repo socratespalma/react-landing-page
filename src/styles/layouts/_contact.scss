@@ -51,6 +51,16 @@
   }
 }
 
+.invalid {
+  border-bottom: 2px solid red;
+}
+
+.error {
+  color: red;
+  padding-top: 0.3rem;
+  font-size: 0.8rem;
+}
+
 @include abs.media-sm {
   .contact__form {
     width: 20rem;

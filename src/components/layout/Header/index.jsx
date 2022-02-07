@@ -1,10 +1,26 @@
 import Navbar from '@components/layout/Navbar';
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
+  const [headerBackground, setHeaderBackground] = useState(false);
+  const headerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 600;
+      if (headerRef.current !== show) {
+        setHeaderBackground(show);
+      }
+    };
+    document.addEventListener('scroll', handleScroll);
+
+    return () => {
+      document.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   return (
-    <header>
+    <header className={`${headerBackground ? 'header' : 'header-transparent'}`}>
       <Link to="/" className="logo">
         SPG
       </Link>
