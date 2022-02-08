@@ -39,15 +39,22 @@
     text-align: left;
   }
 
-  .submit {
+  .submit,
+  .reset {
     width: 100%;
     padding: 0.7rem;
     cursor: pointer;
     margin-top: 1rem;
     border-radius: 5px;
     border: none;
-    background-color: abs.$trypan-blue;
+    // background-color: abs.$trypan-blue;
     color: abs.$mint-cream;
+  }
+  .submit {
+    background-color: abs.$trypan-blue;
+  }
+  .reset {
+    background-color: #e63946;
   }
 }
 

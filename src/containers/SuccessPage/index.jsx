@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 
 export default function SuccessPage() {
   return (
-    <div className="main-page">
+    <div className="main-page darken-bcg">
       <Header />
       <main>
         <div className="nf__container">
@@ -15,7 +15,9 @@ export default function SuccessPage() {
           <h3 className="nf__container--text">
             Thank you for submitting your message
           </h3>
-          <p>We will get in touch with you as soon as possible</p>
+          <p className="nf__container--p">
+            We will get in touch with you as soon as possible
+          </p>
           <Link className="nf__container--link" to="/">
             Back Home
           </Link>

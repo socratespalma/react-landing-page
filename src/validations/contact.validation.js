@@ -11,6 +11,7 @@ const contactSchema = Yup.object().shape({
     .required('Last name is required'),
   email: Yup.string().email('Email is invalid').required('Email is required'),
   message: Yup.string()
+    .min(10, 'Must be 10 characters at least')
     .max(250, 'Must be 250 characters or less')
     .required('Message is required')
 });

@@ -1,3 +1,4 @@
+/* eslint-disable react/button-has-type */
 import Textarea from '@components/common/Textarea';
 import Textfield from '@components/common/Textfield';
 import contactSchema from '@validations/contact.validation';
@@ -73,6 +74,9 @@ export default function Contact() {
                 onBlur={handleBlur}
                 value={values.message}
               />
+              <button className="reset" type="reset">
+                Reset
+              </button>
               <button className="submit" type="submit">
                 Submit
               </button>

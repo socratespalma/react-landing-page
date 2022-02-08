@@ -22,7 +22,7 @@ This is a single page application meant for a business called SPG Consulting whi
 
 ## Roadmap
 This project is planned to be updated with minor features implemented like:
-* [ ] documenting code with jsdoc
+* [x] documenting code with jsdoc
 * [x] form validation with formik and yup
 * [x] success page after submitting form
 

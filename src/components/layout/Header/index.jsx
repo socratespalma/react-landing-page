@@ -8,7 +8,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const show = window.scrollY > 600;
+      const show = window.scrollY > 300;
       if (headerRef.current !== show) {
         setHeaderBackground(show);
       }
@@ -20,7 +20,10 @@ export default function Header() {
     };
   }, []);
   return (
-    <header className={`${headerBackground ? 'header' : 'header-transparent'}`}>
+    <header
+      // className="header"
+      className={`${headerBackground ? 'header' : 'header-transparent'}`}
+    >
       <Link to="/" className="logo">
         SPG
       </Link>

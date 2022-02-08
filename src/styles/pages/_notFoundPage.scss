@@ -1,5 +1,8 @@
 @use '../abstracts/index' as abs;
 
+.darken-bcg {
+  background-color: #aaa;
+}
 .nf__container {
   display: flex;
   flex-direction: column;
@@ -10,14 +13,24 @@
   &--text {
     font-size: 2rem;
   }
+  &--p {
+    font-size: 1.3rem;
+    font-weight: 300;
+  }
 
   &--link {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    letter-spacing: 0.05rem;
     color: abs.$dark-color;
+    border: 2px solid abs.$dark-color;
+    padding: 1rem;
+    text-transform: uppercase;
 
     &:hover {
-      color: abs.$trypan-blue;
+      color: abs.$mint-cream;
+      border: 2px solid abs.$mint-cream;
+      // background-color: abs.$mint-cream;
       @include abs.transition-ease-in-out;
     }
   }
@@ -32,5 +45,12 @@
 @include abs.media-md {
   .nf__container--img {
     width: 30rem;
+  }
+}
+
+@include abs.media-sm {
+  .nf__container--text,
+  .nf__container--p {
+    padding: 0 1rem;
   }
 }
