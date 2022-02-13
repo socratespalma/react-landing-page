@@ -1,6 +1,6 @@
 import womanFace from '@assets/img/woman-smiling.jpeg';
+import InfoStatsCard from '@components/common/InfoStatsCard';
 import React from 'react';
-import InfoStatsCard from '../../common/InfoStatsCard';
 
 export default function About() {
   return (
