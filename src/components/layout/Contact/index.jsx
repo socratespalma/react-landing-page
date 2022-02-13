@@ -1,6 +1,6 @@
 /* eslint-disable react/button-has-type */
-import Textarea from '@components/common/Textarea';
-import Textfield from '@components/common/Textfield';
+import Textarea from '@components/auth/Textarea';
+import Textfield from '@components/auth/Textfield';
 import contactSchema from '@validations/contact.validation';
 import { Form, Formik } from 'formik';
 import Notiflix from 'notiflix';

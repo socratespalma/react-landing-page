@@ -1,5 +1,6 @@
 import womanFace from '@assets/img/woman-smiling.jpeg';
 import React from 'react';
+import InfoStatsCard from '../../common/InfoStatsCard';
 
 export default function About() {
   return (
@@ -13,22 +14,10 @@ export default function About() {
       </p>
       <section className="statistics">
         <section className="info-stats">
-          <div className="info-stats__card">
-            <h3>100+</h3>
-            <p>Happy customers</p>
-          </div>
-          <div className="info-stats__card">
-            <h3>10x</h3>
-            <p>Value delivered</p>
-          </div>
-          <div className="info-stats__card">
-            <h3>10%</h3>
-            <p>Traffic increase</p>
-          </div>
-          <div className="info-stats__card">
-            <h3>10+</h3>
-            <p>Active employees</p>
-          </div>
+          <InfoStatsCard qty="100+" text="Happy customers" />
+          <InfoStatsCard qty="10x" text="Value delivered" />
+          <InfoStatsCard qty="10%" text="Traffic increase" />
+          <InfoStatsCard qty="10+" text="Active employees" />
         </section>
         <figure className="img-container">
           <img className="woman-img" src={womanFace} alt="woman smiling" />
