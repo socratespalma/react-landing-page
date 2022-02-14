@@ -1,6 +1,7 @@
 import womanFace from '@assets/img/woman-smiling.jpeg';
 import InfoStatsCard from '@components/common/InfoStatsCard';
 import React from 'react';
+import infoStats from '../../../utils/infoStats';
 
 export default function About() {
   return (
@@ -14,10 +15,9 @@ export default function About() {
       </p>
       <section className="statistics">
         <section className="info-stats">
-          <InfoStatsCard qty="100+" text="Happy customers" />
-          <InfoStatsCard qty="10x" text="Value delivered" />
-          <InfoStatsCard qty="10%" text="Traffic increase" />
-          <InfoStatsCard qty="10+" text="Active employees" />
+          {infoStats.map((stat) => (
+            <InfoStatsCard key={stat.id} stat={stat} />
+          ))}
         </section>
         <figure className="img-container">
           <img className="woman-img" src={womanFace} alt="woman smiling" />

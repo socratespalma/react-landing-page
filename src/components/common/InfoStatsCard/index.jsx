@@ -1,10 +1,10 @@
 import React from 'react';
 
-export default function InfoStatsCard({ qty, text }) {
+export default function InfoStatsCard({ stat }) {
   return (
     <div className="info-stats__card">
-      <h3>{qty}</h3>
-      <p>{text}</p>
+      <h3>{stat.qty}</h3>
+      <p>{stat.text}</p>
     </div>
   );
 }

@@ -3,17 +3,17 @@ import { FaRegGrinStars } from 'react-icons/fa';
 import { IoAnalytics } from 'react-icons/io5';
 import { MdAdsClick, MdManageSearch } from 'react-icons/md';
 
-export default function ServiceCard({ title, info }) {
+export default function ServiceCard({ service }) {
   const checkIcon = () => {
-    if (title === 'Social media marketing') {
+    if (service.title === 'Social media marketing') {
       return <MdAdsClick className="icon" />;
     }
 
-    if (title === 'Branding consulting') {
+    if (service.title === 'Branding consulting') {
       return <FaRegGrinStars className="icon" />;
     }
 
-    if (title === 'Market analysis') {
+    if (service.title === 'Market analysis') {
       return <IoAnalytics className="icon" />;
     }
     return <MdManageSearch className="icon" />;
@@ -23,10 +23,10 @@ export default function ServiceCard({ title, info }) {
     <div className="card">
       {checkIcon()}
       <h3>
-        <span className="first-letter">{title[0]}</span>
-        {title.slice(1, title.length)}
+        <span className="first-letter">{service.title[0]}</span>
+        {service.title.slice(1, service.title.length)}
       </h3>
-      <p>{info}</p>
+      <p>{service.info}</p>
     </div>
   );
 }
