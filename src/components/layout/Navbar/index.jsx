@@ -12,20 +12,13 @@ export default function Navbar() {
   /**
    * This is a function that checks the size of the window
    */
-  const checkSize = () => {
-    setSize(window.innerWidth);
-  };
+  const checkSize = () => setSize(window.innerWidth);
 
   /**
    * This is a function that sets the state of 'isOpen' depending on the screensize
    */
-  const handleClick = () => {
-    if (size < 1024) {
-      setIsOpen(!isOpen);
-    } else {
-      setIsOpen(true);
-    }
-  };
+  const handleClick = () =>
+    size < 1024 ? setIsOpen((prevState) => !prevState) : setIsOpen(true);
 
   /**
    * This is a function that handles the click on the home nav item
@@ -40,7 +33,7 @@ export default function Navbar() {
 
     if (size < 1024) {
       setIsOpen(false);
-    } else if (size >= 1024) {
+    } else {
       setIsOpen(true);
     }
 
@@ -50,21 +43,13 @@ export default function Navbar() {
   }, [size]);
 
   useEffect(() => {
-    if (size < 1024) {
-      if (isOpen) {
-        navRef.current.style.visibility = 'visible';
-        showNavRef.current.style.transform = 'translateY(0)';
-      } else {
-        navRef.current.style.visibility = 'hidden';
-        showNavRef.current.style.transform = 'translateY(-100%)';
-      }
-    } else if (size >= 1024) {
+    if ((isOpen && size < 1024) || size >= 1024) {
       navRef.current.style.visibility = 'visible';
       showNavRef.current.style.transform = 'translateY(0)';
+    } else {
+      navRef.current.style.visibility = 'hidden';
+      showNavRef.current.style.transform = 'translateY(-100%)';
     }
-    // else {
-    //   setIsOpen(true);
-    // }
   }, [isOpen]);
 
   useScroll();
@@ -103,7 +88,7 @@ export default function Navbar() {
         type="button"
         className="menu-btn"
         onClick={() => {
-          setIsOpen(!isOpen);
+          setIsOpen((prevState) => !prevState);
         }}
       >
         {isOpen ? <FiX /> : <FiMenu />}
